@@ -21,18 +21,17 @@ group :assets do
 end
 
 
-
 gem 'slim'
 gem 'jquery-rails'
-
-
-
+gem "twitter-bootstrap-rails"
 
 
 gem 'factory_girl_rails'
 gem 'rspec-rails'
 
+gem 'mongo'
 gem 'mongoid'
+gem 'activeadmin-mongoid', :git => 'git://github.com/Ostrzy/activeadmin-mongoid.git', :branch => 'filter_support'
 gem 'database_cleaner'
 
 gem 'capybara'
