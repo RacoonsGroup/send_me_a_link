@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-environment_id="jruby@send_me_a_link"
+environment_id="jruby-1.7.2@send_me_a_link"
 rvm_trust_rvmrcs_flag=1
 
 

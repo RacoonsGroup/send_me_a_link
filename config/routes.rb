@@ -5,6 +5,9 @@ SendMeALink::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "home#index"
+  resources :users
+  resources :registrations
+
+  root :to => "registrations#index"
 
 end

@@ -1,0 +1,56 @@
+.title{
+	text-align:center;
+}
+
+
+.left-column{
+	width:40%;
+	float:left;
+}
+
+.right-column{
+	width:60%;
+	float:right;
+	.simple_forms{
+		float:right;
+		width:300px;
+		margin-right:10%;
+		input{
+			width:92%;
+		};
+		.btn-registr{
+		width:46%;
+		height:60px;
+		margin-left:2%;
+		}
+		#input_fields{
+			margin-left:2%;
+		}
+		.simple_form{
+			width:260px;
+		}
+	}
+}
+.simple_form{
+	float:left;
+}
+
+#checkboxs{
+	float: right;
+    margin-top: 40px;
+    width: 40px;
+}
+
+.quest{
+	float: left;
+    margin-top: 40px;
+}
+
+.check-un-check{
+	disabled:false;
+}
+
+footer{
+	margin-top:350px;
+	float:left;
+}

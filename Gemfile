@@ -24,6 +24,7 @@ end
 gem 'slim'
 gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
+gem "simple_form", ">= 2.0.4"
 
 
 gem 'factory_girl_rails'
