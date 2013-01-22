@@ -1,7 +1,7 @@
 class RegistrationsController < ApplicationController
 
-  def index
-  	@user =  User.new
+  def new
+  	@group =  Group.new
   end
 
 end
