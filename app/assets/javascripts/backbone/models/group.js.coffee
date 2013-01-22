@@ -5,4 +5,4 @@ class SendMeALink.Models.Group extends Backbone.Model
 
 class SendMeALink.Collections.GroupsCollection extends Backbone.Collection
   model: SendMeALink.Models.Group
-  url: '/groups'
+  url: '/group_registrations'

@@ -25,7 +25,13 @@ class SendMeALink.Views.GroupRegistrations.NewView extends Backbone.View
 
   createGroup: (e) ->
     e.preventDefault()
+    console.log @collection
+    console.log @$el.find("input#group_name").val()
+    console.log @$el.find("input#group_login").val()
     @collection.create(
-      name: @$el.find("input#group_name")
-      login: @$el.find("input#group_login")
+      name: @$el.find("input#group_name").val()
+      login: @$el.find("input#group_login").val()
     )
+
+  collection:
+    new SendMeALink.Collections.GroupsCollection()
