@@ -3,12 +3,8 @@ SendMeALink::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  devise_for :users
+  resources :group_registrations, only: [:new, :create]
 
-  resources :users
-  resources :registrations, except: :index
-  resources :groups
-
-  root :to => "registrations#new"
+  root :to => "group_registrations#new"
 
 end

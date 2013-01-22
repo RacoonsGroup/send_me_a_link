@@ -28,22 +28,20 @@ gem "twitter-bootstrap-rails"
 gem 'rails-backbone'
 
 gem "simple_form", ">= 2.0.4"
-
-
-gem 'factory_girl_rails'
-gem 'rspec-rails'
+gem "inherited_resources"
 
 gem 'mongo'
 gem 'mongoid'
 gem 'activeadmin-mongoid', :git => 'git://github.com/Ostrzy/activeadmin-mongoid.git', :branch => 'filter_support'
 gem 'database_cleaner'
 
-gem 'capybara'
-
 gem 'devise'
 
-
-
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'capybara'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -252,6 +252,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   hogan_assets
+  inherited_resources
   jquery-rails
   jruby-openssl
   mongo
