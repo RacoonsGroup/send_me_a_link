@@ -6,8 +6,9 @@ SendMeALink::Application.routes.draw do
   devise_for :users
 
   resources :users
-  resources :registrations
+  resources :registrations, except: :index
+  resources :groups
 
-  root :to => "registrations#index"
+  root :to => "registrations#new"
 
 end
