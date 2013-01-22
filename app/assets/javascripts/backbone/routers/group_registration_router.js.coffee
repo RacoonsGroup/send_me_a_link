@@ -6,6 +6,7 @@ class SendMeALink.Routers.GroupRegistrationsRouter extends Backbone.Router
     "add_email": "add_email"
 
   create: ->
+    console.log 'asd'
     @view = new SendMeALink.Views.GroupRegistrations.CreateView()
     $("#group_registrations").html(@view.render().el)
 
