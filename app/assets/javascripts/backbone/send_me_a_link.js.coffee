@@ -9,3 +9,8 @@ window.SendMeALink =
   Collections: {}
   Routers: {}
   Views: {}
+  init: (page) ->
+    switch page
+      when "group_registration"
+        new SendMeALink.Routers.GroupRegistrationsRouter()
+    Backbone.history.start()
