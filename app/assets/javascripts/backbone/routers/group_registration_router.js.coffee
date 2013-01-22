@@ -19,6 +19,4 @@ class SendMeALink.Routers.GroupRegistrationsRouter extends Backbone.Router
 
   new: ->
     @view = new SendMeALink.Views.GroupRegistrations.NewView()
-    console.log @view
-    console.log $("section.right-column")
     $("section.right-column").html(@view.render().el)

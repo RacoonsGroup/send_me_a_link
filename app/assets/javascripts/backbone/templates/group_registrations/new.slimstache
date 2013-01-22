@@ -1,0 +1,14 @@
+.simple_forms
+  form#new_group.simple_form.new_group accept-charset="UTF-8" action="#create"
+    #input_fields
+      .input.required
+        input#group_name.required name="group[email]" placeholder="Your group name" required="required" size="50" type="string" value=""
+      .input.required
+        input#group_login.required disabled="disabled" name="group[email]" placeholder="your-login" required="required" size="50" type="string" value=""
+    input.button.btn-primary.btn-registr name="commit" type="submit" value="Register Free"
+    input.button.btn-primary.btn-registr name="commit" type="submit" value="Register Premium"
+
+    #checkboxs
+      input.checkbox type="checkbox" checked="checked"
+
+    i class="quest icon-question-sign"

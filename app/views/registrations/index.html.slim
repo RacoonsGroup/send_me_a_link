@@ -8,19 +8,6 @@ section class="left-column"
     It seemed to all these thousands of fans and fanzines a frustrating fact that we could let a complete epic-type of a theme-album collect dust on a shelf. The truth is it was, of course, far from that complete, ready-to-be-released epic creation of a theme- album it was made out to be...
 
 section.right-column
-  .simple_forms
-    = simple_form_for(@user) do |f|
-      #input_fields
-        = f.input :email, placeholder: 'Racoons Group', label: false, input_html: { class: "slug-input" }
-        = f.input :email, placeholder: 'racoons-group', label: false, input_html: { class: 'slug-output', disabled: 'disabled'}
-
-      = f.button :submit, 'Register Free', class: 'btn-primary btn-registr'
-      = f.button :submit, 'Register Premium', class: 'btn-primary btn-registr'
-
-    #checkboxs
-      input.checkbox type="checkbox" checked="checked"
-
-    i class="quest icon-question-sign"
 
 footer
   p © Racoons Group 2013

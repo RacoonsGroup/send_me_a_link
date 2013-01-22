@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //
+//= require hogan.js
+//
 //= require underscore
 //= require backbone
 //= require backbone_rails_sync
@@ -21,4 +23,3 @@
 //= require backbone/send_me_a_link
 //
 //= require_tree ./jquery-plugins/
-

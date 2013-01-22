@@ -18,15 +18,16 @@ group :assets do
   gem 'therubyrhino'
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'hogan_assets'
 end
 
 
 gem 'slim'
 gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
+gem 'rails-backbone'
 
 gem "simple_form", ">= 2.0.4"
-gem 'rails-backbone'
 
 
 gem 'factory_girl_rails'
