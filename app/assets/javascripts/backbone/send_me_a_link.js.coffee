@@ -10,7 +10,7 @@ window.SendMeALink =
   Routers: {}
   Views: {}
   init: (page) ->
-    switch page
+    window.SendMeALink.router = switch page
       when "group_registration"
         new SendMeALink.Routers.GroupRegistrationsRouter()
     Backbone.history.start()

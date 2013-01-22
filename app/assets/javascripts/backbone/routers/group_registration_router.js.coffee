@@ -1,23 +1,15 @@
 class SendMeALink.Routers.GroupRegistrationsRouter extends Backbone.Router
   routes:
     "": "new"
-    "create": "create"
     "show_hint": "show_hint"
     "add_email": "add_email"
 
-  create: ->
-    console.log 'asd'
-    @view = new SendMeALink.Views.GroupRegistrations.CreateView()
-    $("#group_registrations").html(@view.render().el)
-
   show_hint: ->
-    @view = new SendMeALink.Views.GroupRegistrations.ShowHintView()
-    $("#group_registrations").html(@view.render().el)
+    # show hint to user
 
   add_email: ->
-    @view = new SendMeALink.Views.GroupRegistrations.AddEmailView()
-    $("#group_registrations").html(@view.render().el)
+    # will be in next page
 
   new: ->
-    @view = new SendMeALink.Views.GroupRegistrations.NewView()
+    @view = new SendMeALink.Views.GroupRegistrations.NewView({model: new SendMeALink.Models.Group})
     $("section.right-column").html(@view.render().el)

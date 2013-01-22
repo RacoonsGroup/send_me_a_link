@@ -1,5 +1,6 @@
 class SendMeALink.Models.Group extends Backbone.Model
   paramRoot: 'group'
+  urlRoot: '/group_registrations'
 
   # defaults:
 

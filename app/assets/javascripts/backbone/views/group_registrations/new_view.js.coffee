@@ -25,13 +25,23 @@ class SendMeALink.Views.GroupRegistrations.NewView extends Backbone.View
 
   createGroup: (e) ->
     e.preventDefault()
-    console.log @collection
-    console.log @$el.find("input#group_name").val()
-    console.log @$el.find("input#group_login").val()
-    @collection.create(
+    @model.set(
       name: @$el.find("input#group_name").val()
       login: @$el.find("input#group_login").val()
+      { silent: true }
     )
+    @model.save({}, {
+      success: => @saved()
+      error:   => @failed()
+    })
+    @$el.find("input").attr "disabled", "disabled"
 
-  collection:
-    new SendMeALink.Collections.GroupsCollection()
+  saved: ->
+    console.log "success"
+    console.log @model
+    @$el.find("input").removeAttr "disabled"
+
+  failed: ->
+    console.log "error"
+    console.log @model
+    @$el.find("input").removeAttr "disabled"
