@@ -8,7 +8,6 @@
     input.button.btn-primary.btn-registr name="commit" type="submit" value="Register Free"
     input.button.btn-primary.btn-registr name="commit" type="submit" value="Register Premium"
 
-    #checkboxs
-      input.checkbox type="checkbox" checked="checked"
+    input#toggle-login-availability type="checkbox" checked="checked"
 
     i class="quest icon-question-sign"
