@@ -2,9 +2,17 @@
   form#new_group.simple_form.new_group accept-charset="UTF-8" action="#create"
     #input_fields
       .input.required
-        input#group_name.required name="group[name]" placeholder="Your group name" required="required" size="50" type="string" value=""
+        input#name.required name="group[name]" placeholder="Your group name" required="required" size="50" type="text" value=""
+      span.text-error#name_error
       .input.required
-        input#group_login.required disabled="disabled" name="group[login]" placeholder="your-login" required="required" size="50" type="string" value=""
+        input#email.required name="user[email]" placeholder="Your email" required="required" size="50" type="email" value=""
+      span.text-error#email_error
+      .input.required
+        input#password.required name="user[password]" placeholder="Your password" required="required" size="50" type="password" value="" 
+      span.text-error#password_error       
+      .input.required
+        input#slug.required disabled="disabled" name="group[login]" placeholder="your-login" required="required" size="50" type="text" value=""
+      span.text-error#slug_error
     input.button.btn-primary.btn-registr name="commit" type="submit" value="Register Free"
     input.button.btn-primary.btn-registr name="commit" type="submit" value="Register Premium"
 

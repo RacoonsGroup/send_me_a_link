@@ -3,10 +3,27 @@ class Group
 
   field :name
   field :slug
-  field :password_salt
-  field :password_hash
   field :description
   field :created_at, type: DateTime, default: Time.now
+  field :owner_id
+
+  attr_accessible :name, :slug, :description
+
+  validates :name, uniqueness: true, presence: true
+  validates :slug, uniqueness: true, presence: true
+
+  has_and_belongs_to_many :users
+
+  index({ name: 1 }, { unique: true, name: "name_index" })
+  index({ slug: 1 }, { unique: true, name: "slug_index" })
+
+  def owner
+    User.find(owner_id)
+  end
+
+  def owner?(user)
+    owner_id == user.id
+  end
 
   # attr_accessor :password, :password_confirmation
   # before_save :encrypt_password
