@@ -6,8 +6,7 @@ SendMeALink::Application.routes.draw do
 
   resources :group_registrations, only: [:new, :create]
 
-  resources :registrations, except: :index
-  resources :groups
+  resources :groups, only: [:show]
 
   root :to => "group_registrations#new"
 
