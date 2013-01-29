@@ -8,6 +8,10 @@ SendMeALink::Application.routes.draw do
 
   resources :groups, only: [:show]
 
+  constraints(Subdomain) do
+    match '/' => 'groups#show'
+  end
+
   root :to => "group_registrations#new"
 
 end

@@ -1,10 +1,11 @@
 class GroupsController < InheritedResources::Base
   actions :show
   respond_to :html
+  before_filter :authenticate_user!
 
   private
 
-    def begin_of_association_chain
-      current_user
+    def resource
+      current_user.groups.find_by(slug: request.subdomain)
     end
 end
