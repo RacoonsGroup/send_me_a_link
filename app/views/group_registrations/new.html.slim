@@ -1,4 +1,4 @@
-h1.title Send Me a Link
+h1 class="title" Send Me a Link
 
 section class="left-column"
   p
@@ -7,12 +7,23 @@ section class="left-column"
     BLOOD ON ICE is a legend among those who have followed us throughout the years. Never permitted to forget about its existence, constantly reminded of it as I was by all the tens of thousands of letters from our fans that I've received throughout the years ever since I breathed about it in the press some years ago, Blood On Ice seemed a very difficult piece of gravel to get out of my shoe.
     It seemed to all these thousands of fans and fanzines a frustrating fact that we could let a complete epic-type of a theme-album collect dust on a shelf. The truth is it was, of course, far from that complete, ready-to-be-released epic creation of a theme- album it was made out to be...
 
-section.right-column
+section class="right-column"
+  div class="simple_forms"
+    = simple_form_for(resource, url: group_registrations_path) do |f|
+      div id="input_fields"
+        = f.input :name, placeholder: 'Your group name', label: false
+        = f.simple_fields_for(:owners_attributes) do |o|
+          = o.input :email, placeholder: 'Your email', label: false, input_html: {name: "group[owners_attributes][][email]"}
+          = o.input :password, placeholder: 'Your password', label: false, input_html: {name: "group[owners_attributes][][password]"}
+        = f.input :slug, placeholder: 'your-login', label: false
+
+      = f.button :submit, 'Register Free', class: 'btn-primary btn-registr'
+      = f.button :submit, 'Register Premium', class: 'btn-primary btn-registr', disabled: true
+
+    div id="checkboxs"
+      input type="checkbox" class="checkbox" checked="checked"
+
+    i class="quest icon-question-sign"
 
 footer
-  p © Racoons Group 2013
-
-javascript:
-  $(function(){
-    SendMeALink.init('group_registration');
-  })
+  p © Company 2012
